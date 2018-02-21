@@ -1,0 +1,37 @@
+title: TASS Template Task
+description: TASS Test Task
+image: logo.png
+has_registration: True
+html:
+  overview: overview.html
+  evaluation: evaluation.html
+  terms: terms.html
+  data: data.html
+leaderboard:
+    leaderboards:
+      RESULTS: &RESULTS
+        label: Results
+        rank: 1
+    columns:
+        accuracy:
+          label: accuracy
+          leaderboard: *RESULTS
+          rank: 1
+          numeric_format: 3
+phases:
+  1:
+    phasenumber: 1
+    color: green
+    label: 'Official submission'
+    start_date: 2018-02-14 18:00:00+00:00
+    max_submissions: 100
+    scoring_program: scoring_program.zip
+    reference_data: reference_data.zip
+  2:
+    phasenumber: 2
+    color: purple
+    label: 'Unofficial submissions'
+    start_date: 2018-05-14 18:00:00+00:00
+    max_submissions: 100
+    scoring_program: scoring_program.zip
+    reference_data: reference_data.zip
